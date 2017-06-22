@@ -1,0 +1,8 @@
+IMPORTANT INFORMATION
+====================
+
+DSVL 0.0.8c no longer depends on the DirectX 9.0 SDK.
+DirectShow is now part of the Microsoft Platform SDK
+(April 2005 - Windows Server 2003 SP 1).
+
+[http://msdn.microsoft.com/directx/sdk/readmepage/default.aspx]

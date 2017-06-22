@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{20E43A4F-FDAE-4FC9-BF6D-CBF24790FE86}</ProjectGuid>
+    <RootNamespace>AR</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)lib\</OutDir>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\win32-i386;$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ar3DCreateHandle.c" />
+    <ClCompile Include="ar3DUtil.c" />
+    <ClCompile Include="arCreateHandle.c" />
+    <ClCompile Include="arDetectMarker.c" />
+    <ClCompile Include="arDetectMarker2.c" />
+    <ClCompile Include="arFilterTransMat.c" />
+    <ClCompile Include="arGetLine.c" />
+    <ClCompile Include="arGetMarkerInfo.c" />
+    <ClCompile Include="arGetTransMat.c" />
+    <ClCompile Include="arGetTransMatStereo.c" />
+    <ClCompile Include="arImageProc.c" />
+    <ClCompile Include="arLabeling.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBI3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBI3C565.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBI3CA.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBI3CA4444.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBI3CA5551.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBIA3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBIC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBICY.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBIYC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBR3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBR3C565.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBR3CA.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBR3CA4444.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBR3CA5551.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBRA3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBRC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBRCY.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBRYC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDBZ.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWI3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWI3C565.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWI3CA.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWI3CA4444.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWI3CA5551.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWIA3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWIC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWICY.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWIYC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWR3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWR3C565.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWR3CA.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWR3CA4444.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWR3CA5551.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWRA3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWRC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWRCY.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWRYC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubDWZ.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBI3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBI3C565.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBI3CA.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBI3CA4444.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBI3CA5551.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBIA3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBIC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBICY.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBIYC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBR3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBR3C565.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBR3CA.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBR3CA4444.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBR3CA5551.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBRA3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBRC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBRCY.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBRYC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEBZ.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWI3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWI3C565.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWI3CA.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWI3CA4444.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWI3CA5551.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWIA3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWIC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWICY.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWIYC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWR3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWR3C565.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWR3CA.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWR3CA4444.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWR3CA5551.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWRA3C.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWRC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWRCY.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWRYC.c" />
+    <ClCompile Include="arLabelingSub\arLabelingSubEWZ.c" />
+    <ClCompile Include="arPattAttach.c" />
+    <ClCompile Include="arPattCreateHandle.c" />
+    <ClCompile Include="arPattGetID.c" />
+    <ClCompile Include="arPattLoad.c" />
+    <ClCompile Include="arPattSave.c" />
+    <ClCompile Include="arUtil.c" />
+    <ClCompile Include="mAlloc.c" />
+    <ClCompile Include="mAllocDup.c" />
+    <ClCompile Include="mAllocInv.c" />
+    <ClCompile Include="mAllocMul.c" />
+    <ClCompile Include="mAllocTrans.c" />
+    <ClCompile Include="mAllocUnit.c" />
+    <ClCompile Include="mDet.c" />
+    <ClCompile Include="mDisp.c" />
+    <ClCompile Include="mDup.c" />
+    <ClCompile Include="mFree.c" />
+    <ClCompile Include="mInv.c" />
+    <ClCompile Include="mMul.c" />
+    <ClCompile Include="mPCA.c" />
+    <ClCompile Include="mSelfInv.c" />
+    <ClCompile Include="mTrans.c" />
+    <ClCompile Include="mUnit.c" />
+    <ClCompile Include="paramChangeSize.c" />
+    <ClCompile Include="paramClear.c" />
+    <ClCompile Include="paramDecomp.c" />
+    <ClCompile Include="paramDisp.c" />
+    <ClCompile Include="paramDistortion.c" />
+    <ClCompile Include="paramFile.c" />
+    <ClCompile Include="paramGetPerspective.c" />
+    <ClCompile Include="paramLT.c" />
+    <ClCompile Include="vAlloc.c" />
+    <ClCompile Include="vDisp.c" />
+    <ClCompile Include="vFree.c" />
+    <ClCompile Include="vHouse.c" />
+    <ClCompile Include="vInnerP.c" />
+    <ClCompile Include="vTridiag.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="arLabelingSub\arLabelingPrivate.h" />
+    <ClInclude Include="arLabelingSub\arLabelingSub.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
